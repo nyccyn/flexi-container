@@ -2,3 +2,5 @@ src
 node_modules
 .idea
 .babelrc
+example
+.gitignore

@@ -1,5 +1,5 @@
-const Contract = require('./Contract');
-const ObjectContainer = require('./ObjectContainer');
+import Contract from './contract';
+import ObjectContainer from './object-container';
 
 export function registerService(contract, implementation, plugin) {
     if (!plugin) {

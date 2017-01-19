@@ -1,4 +1,4 @@
-const Contract = require('./Contract');
+import Contract from './contract';
 
 export default class ObjectContainer {
     constructor(){
