@@ -1,6 +1,6 @@
 {
   "name": "flexi-container",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Flexible container for services that separates implementation and usage from configuration",
   "main": "./lib/index.js",
   "scripts": {
