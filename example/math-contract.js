@@ -1,6 +1,6 @@
-const flexiContainer = require('flexi-container');
+const Contract = require('flexi-container').Contract;
 
-module.exports = new flexiContainer.Contract({
-    add: flexiContainer.Contract.Function,
-    sub: flexiContainer.Contract.Function
+module.exports = new Contract({
+    add: Contract.Function,
+    sub: Contract.Function
 });

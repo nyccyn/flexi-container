@@ -1,4 +1,5 @@
 import Contract from './contract';
+const Listeners = 'Listeners';
 
 export default class ObjectContainer {
     constructor(){
@@ -10,9 +11,9 @@ export default class ObjectContainer {
         for (let f in contract){
             switch (contract[f]){
                 case Contract.Event:
-                    implementation[f+'Listeners'] = [];
-                    implementation[f] = (...args) => implementation[f+'Listeners'].forEach(l => l(...args));
-                    consumer[f] = callback => implementation[f+'Listeners'].push(callback);
+                    implementation[f+Listeners] = [];
+                    implementation[f] = (...args) => implementation[f+Listeners].forEach(l => l(...args));
+                    consumer[f] = callback => implementation[f+Listeners].push(callback);
                     break;
                 case Contract.Function:
                     consumer[f] = implementation[f].bind(implementation);
