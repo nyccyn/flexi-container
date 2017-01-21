@@ -1,7 +1,7 @@
 # flexi-container
-Flexible container for services that separates implementation and usage from configuration
+Flexible container for services that separates implementation and usage from configuration.
 
-flexi-container create services using provied plugin while the default plugin, ObjectContaier, create the service in memory
+flexi-container create services using provied plugin while the default plugin, ObjectContaier, create the service in memory.
 ### Supported Plugins
 [flexi-container-socket](https://github.com/nyccyn/flexi-container-socket) - socket.io plugin
 
@@ -9,7 +9,7 @@ flexi-container create services using provied plugin while the default plugin, O
 `npm install --save flexi-container`
 
 ## Usage
-Firts thing we need to create a `Contract` for are service that the service will implement and the consumer will use:
+Firts thing we need to create a `Contract` for our service that the service will implement and the consumer will use:
 ```javascript
 // math-contract.js
 const Contract = require('flexi-container').Contract;
@@ -20,7 +20,8 @@ module.exports = new Contract({
 });
 ```
 
-Contract's members can be either `Contract.Function` or `Contract.Event`
+Contract's members can be either `Contract.Function` or `Contract.Event`.
+When members is a `Contract.Event`, the method will be exposed to the concrete class.
 
 our service just implement a class with the same members
 ```javascript
